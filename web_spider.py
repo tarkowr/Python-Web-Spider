@@ -3,10 +3,11 @@ import requests
 links_file = open("links.txt", "r")
 results_file = open("results.txt", "w")
 
+# Configure cookie to send with HTTP req
 jar = requests.cookies.RequestsCookieJar()
-jar.set("replace-with-session-name", "replace-with-auth-session-id", domain="replace-with-domain", path="/")
+jar.set("replace-with-session-cookie-name", "replace-with-auth-session-id", domain="replace-with-domain", path="/")
 
-query = ["block", "matching"]
+query = ["replace-with-search-string"]
 number_found = 0
 context = 100  # 0 will write the entire http response to the passwords file.
 
